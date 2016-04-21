@@ -7,5 +7,7 @@ class MyClass():
         self.arg = arg
         return self.var + " " + self.arg
 
-cls = MyClass("hello")
-print cls.myfunction("world")
+if __name__ == "__main__":
+    cls = MyClass("hello")
+    print cls.myfunction("world")
+    print cls.var

@@ -15,4 +15,4 @@ B, C = 2, 3
 C, B = B, C
 
 # printing
-print A + B + C
+print A + B + C, A

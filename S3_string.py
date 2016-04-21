@@ -7,4 +7,4 @@ st = """
 hello world
 """
 
-print "value:" + str(1024.0)
+print "value:" + str({'key':123})

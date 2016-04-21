@@ -1,5 +1,5 @@
 # example function definition
-def fnc(a, b=None):
+def fnc(a, b=None, c="asdf"):
     if not b is None:
         return a+b
     else:
@@ -11,4 +11,4 @@ print result
 result, message = fnc(1)
 print result, message
 
-print fnc(a=1, b=2)
+print fnc(a=1, c="value")
