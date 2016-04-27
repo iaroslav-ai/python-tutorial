@@ -36,4 +36,4 @@ while True:
     plt.plot([0,0,1,1,0],[0,1,1,0,0])
     plt.show()
 
-    plt.pause(0.001)
+    plt.pause(0.005)
