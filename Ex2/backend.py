@@ -3,7 +3,8 @@ import matplotlib.pyplot as plt
 
 def show_tensor(t):
 
-    for data in t:
+    for key in t:
+        data = t[key]
         fig, ax = plt.subplots()
         ytick = range(data.shape[0])
 
@@ -16,9 +17,11 @@ def show_tensor(t):
             plt.ylabel("dim 0")
             plt.xlabel("dim 1")
 
-        heatmap = ax.pcolor(data, cmap=plt.cm.Blues, edgecolor='black', linewidth=10, vmin = 0.0, vmax = 1.0)
+        cax = ax.pcolor(data, cmap=plt.cm.seismic, edgecolor='black', linewidth=10, vmin = -3.0, vmax = 3.0)
+        fig.colorbar(cax)
 
-        fig.set_size_inches(data.shape[1] + 1.0, data.shape[0] + 1, forward=True)
+        fig.canvas.set_window_title(key)
+        fig.set_size_inches(data.shape[1] + 2.0, data.shape[0] + 1, forward=True)
         # put the major ticks at the middle of each cell
         ax.set_xticks(np.arange(data.shape[1]) + 0.5, minor=False)
         ax.set_yticks(np.arange(data.shape[0]) + 0.5, minor=False)
