@@ -16,9 +16,11 @@ print lst[5:]
 # -1: last item, -2: one before last, etc
 print lst[-1]
 
+tup = (1,2,"a")
+
 # dictionary
-dct = {'1':1, 1:'one', 'pi':3.1415926535}
+dct = {'1':1, tup:'one', 'pi':3.1415926535}
 print dct['1']
-print dct[1]
+print dct[tup]
 
 
